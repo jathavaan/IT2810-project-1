@@ -12,3 +12,7 @@ export interface CountryOverview {
 export interface CountryOverviewTableRowProps {
   country: CountryOverview;
 }
+
+export interface CountryOverviewTableProps {
+  countries: CountryOverview[];
+}
