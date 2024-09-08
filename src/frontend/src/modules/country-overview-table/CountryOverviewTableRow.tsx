@@ -1,4 +1,5 @@
 import { CountryOverviewTableRowProps } from "./countryOverviewTypes.ts";
+import FavoriteButton from "./FavoriteButton.tsx";
 
 export default function CountryOverviewTableRow({
   country,
@@ -9,8 +10,12 @@ export default function CountryOverviewTableRow({
         <img src={country.flags.png} alt={country.name.common} height="10" />
       </td>
       <td>{country.name.common}</td>
-      <td>{country.population}</td>
-      <td>{country.cca2}</td>
+      <td className="right-align-column">
+        {country.population.toLocaleString()}
+      </td>
+      <td>
+        <FavoriteButton countryCode={country.cca2} isFavorite={true} />
+      </td>
     </tr>
   );
 }

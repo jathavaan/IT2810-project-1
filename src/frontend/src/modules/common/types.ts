@@ -1,7 +1,16 @@
-﻿export interface Name {
+﻿export interface CountryOverview {
+  cca2: string;
+  fifa: string;
+  name: Name;
+  population: number;
+  flags: Flags;
+  continents: string[];
+}
+
+interface Name {
   common: string;
 }
 
-export interface Flags {
+interface Flags {
   png: string;
 }
