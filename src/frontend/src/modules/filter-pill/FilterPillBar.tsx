@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 export default function FilterPillBar(props: FilterPillBarProps) {
   const [pills, setPills] = useState<FilterPillProps[]>([
     {
-      pillKey: "all",
-      label: "All",
+      pillKey: "world",
+      label: "World",
       isActive: true,
       pills: undefined,
       setPills: undefined,

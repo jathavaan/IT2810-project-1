@@ -38,7 +38,7 @@ export default function Dashboard(props: DashboardProps) {
         break;
     }
 
-    if (selectedFilter === "All") {
+    if (selectedFilter === "World") {
       setCountries(props.countries);
       return;
     }
