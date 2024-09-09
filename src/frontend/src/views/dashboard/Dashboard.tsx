@@ -5,6 +5,7 @@ import { CountryOverview } from "../../modules/common/types.ts";
 import { DashboardProps } from "./types.ts";
 import { SortPill } from "../../modules/sort-pill/SortPill.tsx";
 
+
 export default function Dashboard(props: DashboardProps) {
   const [selectedFilter, setSelectedFilter] = useState<string>("all");
   const [sortValue, setSortValue] = useState<string>("name-a-z");
@@ -61,6 +62,7 @@ export default function Dashboard(props: DashboardProps) {
         <SortPill setSortValue={setSortValue} />
       </div>
       <CountryOverviewTable countries={countries} />
+
     </div>
   );
 }

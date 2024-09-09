@@ -2,6 +2,7 @@ import Dashboard from "./views/dashboard/Dashboard.tsx";
 import { Route, Routes } from "react-router-dom";
 import Favorites from "./views/favourites/Favourites.tsx";
 import { useCountryOverview } from "./modules/common/queries.ts";
+import { Navbar } from "./modules/navbar/navbar.tsx";
 
 function App() {
   const response = useCountryOverview();
@@ -15,6 +16,9 @@ function App() {
 
   return (
     <div className="container">
+      <div>
+        <Navbar />
+      </div>
       <Routes>
         <Route
           path="/"
