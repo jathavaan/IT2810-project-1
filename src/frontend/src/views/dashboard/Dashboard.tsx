@@ -19,7 +19,6 @@ export default function Dashboard(props: DashboardProps) {
         : props.countries;
         
     const sortedCountries = [...filteredCountries];
-    // Sorter listen basert på brukerens valg
     switch (sortValue) {
       case "name-a-z":
         setCountries(
@@ -47,8 +46,6 @@ export default function Dashboard(props: DashboardProps) {
         break;
     }
 
-    // Oppdaterer state med den filtrerte og sorterte listen
-    //setCountries(sortedCountries);
   }, [props.countries, selectedFilter, sortValue]);
 
 
