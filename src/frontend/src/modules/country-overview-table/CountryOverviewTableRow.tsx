@@ -1,5 +1,5 @@
-import { CountryOverviewTableRowProps } from "./countryOverviewTypes.ts";
 import FavoriteButton from "./FavoriteButton.tsx";
+import { CountryOverviewTableRowProps } from "./types.ts";
 
 export default function CountryOverviewTableRow({
   country,

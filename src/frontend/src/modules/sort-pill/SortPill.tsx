@@ -18,11 +18,7 @@ export function SortPill(props: SortPillProps) {
     <form>
       <select className="filter-pill sort-pill" onChange={handleSelectChange}>
         {options.map((option) => (
-          <option
-            value={option.value}
-            key={option.value}
-            onChange={() => console.log(option.label)}
-          >
+          <option value={option.value} key={option.value}>
             {option.label}
           </option>
         ))}

@@ -1,7 +1,7 @@
 ﻿import FavoriteIcon from "@mui/icons-material/Favorite";
-import { FavoriteButtonProps } from "./countryOverviewTypes.ts";
 import { useEffect, useState } from "react";
 import { setFavoriteCountry } from "../common/utils.ts";
+import { FavoriteButtonProps } from "./types.ts";
 
 export default function FavoriteButton(props: FavoriteButtonProps) {
   const [isFavorite, setIsFavorite] = useState(false);

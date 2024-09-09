@@ -1,5 +1,5 @@
 ﻿import axios from "axios";
-import { CountryOverview } from "./countryOverviewTypes.ts";
+import { CountryOverview } from "./types.ts";
 
 const BASE_URL = "https://restcountries.com/v3.1";
 const axiosInstance = axios.create({ baseURL: BASE_URL });
