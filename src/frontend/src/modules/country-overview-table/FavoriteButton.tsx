@@ -31,7 +31,7 @@ export default function FavoriteButton(props: FavoriteButtonProps) {
         setIsFavorite(!isFavorite);
       }}
       sx={{
-        color: isFavorite ? "red" : "darkgrey",
+        color: isFavorite ? "#FFB6C1" : "darkgrey",
       }}
     />
   );

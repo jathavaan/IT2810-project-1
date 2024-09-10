@@ -1,5 +1,6 @@
 
 import { useNavigate } from 'react-router-dom'; 
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 export function Navbar() {
     const navigate = useNavigate(); 
@@ -14,8 +15,10 @@ export function Navbar() {
                 <img src="/logo/logo.png" alt="logo" /> {/* Adjust the path to the actual file */}
             </div>
             <div className="link-to-favorites">
-                <button onClick={handleFavoritesClick}>Favorites</button> {/* Button triggers navigation */}
-            </div> 
+    <button onClick={handleFavoritesClick}>
+        <FavoriteIcon style={{ color: "white" }} /> {/* The heart icon */}
+    </button>
+</div>
         </nav>
     );
 }
