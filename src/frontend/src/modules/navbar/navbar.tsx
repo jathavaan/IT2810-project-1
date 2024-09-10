@@ -8,12 +8,17 @@ export function Navbar() {
     const handleFavoritesClick = () => {
         navigate('/favorites'); 
     };
+    const handleHomeClick = () => {
+        navigate('/'); 
+    }
 
     return (
         <nav className="navbar">
             <div className="navbar__logo">
-                <img src="/logo/logo.png" alt="logo" /> {/* Adjust the path to the actual file */}
-            </div>
+            <button onClick={handleHomeClick} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+                <img src="/logo/logo.png" alt="logo" style={{ height: '40px' }} />
+            </button>
+        </div>
             <div className="link-to-favorites">
     <button onClick={handleFavoritesClick}>
         <FavoriteIcon style={{ color: "white" }} /> {/* The heart icon */}
