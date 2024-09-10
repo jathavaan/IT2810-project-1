@@ -12,3 +12,18 @@ export interface FavoriteButtonProps {
   countryCode: string;
   isFavorite: boolean;
 }
+
+export interface PaginationBaseProps {
+  currentPage: number;
+  totalItems: number;
+  pageSize: number;
+  siblingCount?: number;
+}
+
+export interface PaginationProps extends PaginationBaseProps {
+  onPageChange: (page: number) => void;
+}
+
+
+
+
