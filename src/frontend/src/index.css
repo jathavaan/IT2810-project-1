@@ -59,11 +59,11 @@ body {
 }
 
 .link-to-favorites button {
-    background-color: #FFC0CB; /* Green background */
-    color: white; /* White icon */
+    background-color: #FFC0CB; 
+    color: white; 
     border: none;
     padding: 10px 20px;
-    border-radius: 50px; /* Rounded shape for pill-like button */
+    border-radius: 50px; 
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -73,11 +73,11 @@ body {
 }
 
 .link-to-favorites button:hover {
-    background-color: #FFB6C1; /* Darker green on hover */
+    background-color: #FFB6C1; 
 }
 
 .link-to-favorites svg {
-    font-size: 24px; /* Adjust the size of the heart icon */
+    font-size: 24px; 
 }
 
 .table {
