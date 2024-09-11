@@ -12,48 +12,43 @@ export default function Dashboard(props: DashboardProps) {
   const [countries, setCountries] = useState<CountryOverview[]>([]);
 
   useEffect(() => {
+    const filteredCountries =
+      selectedFilter !== "World"
+        ? props.countries.filter((country: CountryOverview) =>
+            country.continents.includes(selectedFilter),
+          )
+        : props.countries;
+        
+    const sortedCountries = [...filteredCountries];
     switch (sortValue) {
       case "name-a-z":
         setCountries(
-          props.countries.sort((a, b) =>
+          sortedCountries.sort((a, b) =>
             a.name.common.localeCompare(b.name.common),
           ),
         );
         break;
       case "name-z-a":
         setCountries(
-          props.countries.sort((a, b) =>
+          sortedCountries.sort((a, b) =>
             b.name.common.localeCompare(a.name.common),
           ),
         );
         break;
       case "population-asc":
         setCountries(
-          props.countries.sort((a, b) => a.population - b.population),
+          sortedCountries.sort((a, b) => a.population - b.population),
         );
         break;
       case "population-desc":
         setCountries(
-          props.countries.sort((a, b) => b.population - a.population),
+          sortedCountries.sort((a, b) => b.population - a.population),
         );
         break;
     }
 
-    if (selectedFilter === "World") {
-      setCountries(props.countries);
-      return;
-    }
-
-    const filteredCountries = props.countries.filter(
-      (country: CountryOverview) => {
-        if (country.continents.includes(selectedFilter)) {
-          return country;
-        }
-      },
-    );
-
-    setCountries(filteredCountries);
   }, [props.countries, selectedFilter, sortValue]);
+
 
   return (
     <div>
